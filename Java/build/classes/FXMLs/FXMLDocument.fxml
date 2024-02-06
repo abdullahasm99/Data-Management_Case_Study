@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPage" maxHeight="700.0" maxWidth="900.0" minHeight="700.0" minWidth="900.0" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #001F3F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane fx:id="banner" prefHeight="87.0" prefWidth="900.0" style="-fx-background-color: #001F30;">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="87.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ATLAS UNIVERSITY" textAlignment="CENTER" wrappingWidth="900.0">
+               <font>
+                  <Font name="Eras Bold ITC" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <Button fx:id="selectBtn" layoutX="14.0" layoutY="649.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" text="SHOW" />
+      <Button fx:id="deleteBtn" layoutX="195.0" layoutY="649.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" text="DELETE" />
+      <Button fx:id="updateBtn" layoutX="379.0" layoutY="649.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" text="UPDATE" />
+      <Button fx:id="insertBtn" layoutX="561.0" layoutY="649.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" text="ADD" />
+      <Button fx:id="gpaBtn" layoutX="744.0" layoutY="649.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="142.0" text="GPA" />
+      <TextField fx:id="yearTextArea" layoutX="618.0" layoutY="249.0" prefHeight="30.0" prefWidth="253.0" promptText="Year">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="dobTextArea" layoutX="324.0" layoutY="249.0" prefHeight="30.0" prefWidth="253.0" promptText="Date Of Birth">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nameTextArea" layoutX="30.0" layoutY="249.0" prefHeight="30.0" prefWidth="253.0" promptText="Student Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="idTextArea" layoutX="30.0" layoutY="167.0" prefHeight="30.0" prefWidth="253.0" promptText="Enter the Student ID*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="joinDateTextArea" layoutX="30.0" layoutY="420.0" prefHeight="30.0" prefWidth="403.0" promptText="Join Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="streetTextArea" layoutX="324.0" layoutY="334.0" prefHeight="30.0" prefWidth="546.0" promptText="Street">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cityTextArea" layoutX="30.0" layoutY="334.0" prefHeight="30.0" prefWidth="253.0" promptText="City">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="departmentTextArea" layoutX="468.0" layoutY="420.0" prefHeight="30.0" prefWidth="403.0" promptText="Department">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="semesterTextArea" layoutX="324.0" layoutY="167.0" prefHeight="30.0" prefWidth="253.0" promptText="Enter Semester(Fall/Spring) for GPA">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="homeBtn" layoutY="87.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #001F3F;" text="HOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="analysisBtn" layoutX="778.0" layoutY="87.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #001F3F;" text="ANALYSIS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="gpaTextArea" layoutX="618.0" layoutY="500.0" prefHeight="30.0" prefWidth="253.0" promptText="GPA">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="gpaYearTextArea" layoutX="618.0" layoutY="167.0" prefHeight="30.0" prefWidth="253.0" promptText="Enter Year for GPA">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="coursesNumTextArea" layoutX="30.0" layoutY="500.0" prefHeight="30.0" prefWidth="253.0" promptText="Number of Courses">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
