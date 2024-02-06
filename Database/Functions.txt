@@ -1,0 +1,23 @@
+CREATE OR REPLACE function ADMIN.gpa_stud_info (v_student_id number, v_semester varchar2, v_year number)
+return number
+is
+v_max_grade number;     v_gpa number;         v_name varchar2(255);
+begin
+
+select sum(e.grade * c.hours) , sum(c.hours)  as gpa into  v_gpa, v_max_grade
+from students s 
+join enrollments e on s.student_id = e.student_id
+join courses c on e.course_id = c.course_id
+where s.student_id = v_student_id and e.semester = v_semester and e.year = v_year
+group by s.student_id,e.semester, e.year;
+
+if v_max_grade > 0 then
+    v_gpa := (v_gpa / v_max_grade)*0.04 ;
+  else
+    v_gpa := null; 
+end if;
+
+return v_gpa;
+
+end;
+/

@@ -1,0 +1,78 @@
+INSERT INTO Students (student_id, name, dob, city, street, year, join_date, department_id)
+VALUES
+    (1, 'John Doe', TO_DATE('1995-05-15', 'YYYY-MM-DD'), 'New York', '123 Main St', 3, TO_DATE('2021-09-01', 'YYYY-MM-DD'), 1),
+    (2, 'Jane Smith', TO_DATE('1998-02-28', 'YYYY-MM-DD'), 'Los Angeles', '456 Oak St', 2, TO_DATE('2020-08-15', 'YYYY-MM-DD'), 2),
+    (3, 'Bob Johnson', TO_DATE('1997-11-10', 'YYYY-MM-DD'), 'Chicago', '789 Pine St', 4, TO_DATE('2022-01-05', 'YYYY-MM-DD'), 1),
+    (4, 'Alice White', TO_DATE('1996-08-20', 'YYYY-MM-DD'), 'San Francisco', '234 Elm St', 3, TO_DATE('2021-10-01', 'YYYY-MM-DD'), 2),
+    (5, 'Charlie Brown', TO_DATE('1999-04-05', 'YYYY-MM-DD'), 'Seattle', '567 Birch St', 2, TO_DATE('2022-02-15', 'YYYY-MM-DD'), 1),
+    (6, 'Eva Green', TO_DATE('1997-09-30', 'YYYY-MM-DD'), 'Miami', '890 Cedar St', 4, TO_DATE('2020-09-10', 'YYYY-MM-DD'), 3),
+    (7, 'David Lee', TO_DATE('1998-06-18', 'YYYY-MM-DD'), 'Dallas', '345 Maple St', 3, TO_DATE('2021-11-20', 'YYYY-MM-DD'), 1),
+    (8, 'Grace Taylor', TO_DATE('1996-01-25', 'YYYY-MM-DD'), 'Houston', '678 Pine St', 4, TO_DATE('2020-12-05', 'YYYY-MM-DD'), 2),
+    (9, 'Frank Miller', TO_DATE('1999-12-12', 'YYYY-MM-DD'), 'Phoenix', '901 Oak St', 2, TO_DATE('2022-03-01', 'YYYY-MM-DD'), 3),
+    (10, 'Helen Wilson', TO_DATE('1997-03-08', 'YYYY-MM-DD'), 'Denver', '123 Spruce St', 3, TO_DATE('2021-08-10', 'YYYY-MM-DD'), 1),
+    (11, 'Ivan Rodriguez', TO_DATE('1998-10-22', 'YYYY-MM-DD'), 'Atlanta', '456 Cedar St', 4, TO_DATE('2020-07-15', 'YYYY-MM-DD'), 2),
+    (12, 'Jill Turner', TO_DATE('1996-07-14', 'YYYY-MM-DD'), 'Boston', '789 Birch St', 2, TO_DATE('2022-04-01', 'YYYY-MM-DD'), 3),
+    (13, 'Kevin Harris', TO_DATE('1999-05-02', 'YYYY-MM-DD'), 'Philadelphia', '234 Maple St', 3, TO_DATE('2021-10-15', 'YYYY-MM-DD'), 1),
+    (14, 'Laura Davis', TO_DATE('1997-02-19', 'YYYY-MM-DD'), 'San Diego', '567 Elm St', 4, TO_DATE('2020-11-30', 'YYYY-MM-DD'), 2),
+    (15, 'Mark Robinson', TO_DATE('1996-09-05', 'YYYY-MM-DD'), 'Austin', '890 Spruce St', 2, TO_DATE('2022-01-15', 'YYYY-MM-DD'), 3),
+    (16, 'Nina Martinez', TO_DATE('1998-04-12', 'YYYY-MM-DD'), 'Chicago', '345 Oak St', 3, TO_DATE('2021-07-20', 'YYYY-MM-DD'), 1),
+    (17, 'Oliver Moore', TO_DATE('1999-11-28', 'YYYY-MM-DD'), 'Seattle', '678 Cedar St', 4, TO_DATE('2020-06-05', 'YYYY-MM-DD'), 2),
+    (18, 'Pamela King', TO_DATE('1996-08-03', 'YYYY-MM-DD'), 'Los Angeles', '901 Elm St', 2, TO_DATE('2022-02-20', 'YYYY-MM-DD'), 3),
+    (19, 'Quincy Johnson', TO_DATE('1997-04-18', 'YYYY-MM-DD'), 'Miami', '123 Birch St', 3, TO_DATE('2021-09-25', 'YYYY-MM-DD'), 1),
+    (20, 'Rachel Turner', TO_DATE('1998-01-11', 'YYYY-MM-DD'), 'Denver', '456 Spruce St', 4, TO_DATE('2020-08-30', 'YYYY-MM-DD'), 2);
+
+INSERT INTO Departments (department_id, name)
+VALUES
+    (1, 'Computer Science'),
+    (2, 'Mathematics'),
+    (3, 'History');
+
+INSERT INTO Courses (course_id, name, hours, max_grade)
+VALUES
+    (101, 'Introduction to Programming', 3, 100),
+    (102, 'Calculus I', 4, 95),
+    (103, 'World History', 3, 90),
+    (104, 'Database Management', 3, 98),
+    (105, 'Linear Algebra', 3, 92),
+    (106, 'American Revolution', 3, 88),
+    (107, 'Web Development', 4, 96),
+    (108, 'Statistics', 3, 94),
+    (109, 'Ancient Civilizations', 3, 89),
+    (110, 'Software Engineering', 4, 97);
+
+INSERT INTO Enrollments (student_id, course_id, grade, semester, year)
+VALUES
+    (1, 101, 95, 'Fall', 2021),
+    (1, 102, 87, 'Spring', 2022),
+    (2, 102, 90, 'Fall', 2021),
+    (3, 103, 82, 'Spring', 2022),
+    (4, 104, 94, 'Fall', 2021),
+    (5, 105, 88, 'Spring', 2022),
+    (6, 106, 89, 'Fall', 2021),
+    (7, 107, 92, 'Spring', 2022),
+    (8, 108, 96, 'Fall', 2021),
+    (9, 109, 85, 'Spring', 2022),
+    (10, 110, 98, 'Fall', 2021),
+    (11, 101, 89, 'Spring', 2022),
+    (12, 102, 82, 'Fall', 2021),
+    (13, 103, 94, 'Spring', 2022),
+    (14, 104, 89, 'Fall', 2021),
+    (15, 105, 91, 'Spring', 2022),
+    (16, 106, 96, 'Fall', 2021),
+    (17, 107, 88, 'Spring', 2022),
+    (18, 108, 90, 'Fall', 2021),
+    (19, 109, 93, 'Spring', 2022),
+    (20, 110, 87, 'Fall', 2021);
+
+INSERT INTO Department_Courses (department_id, course_id)
+VALUES
+    (1, 101),
+    (1, 102),
+    (2, 103),
+    (2, 104),
+    (3, 105),
+    (3, 106),
+    (1, 107),
+    (2, 108),
+    (3, 109),
+    (1, 110);

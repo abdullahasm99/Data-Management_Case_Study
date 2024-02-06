@@ -1,0 +1,47 @@
+-- Create Students Table
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    dob DATE,
+    city VARCHAR(255),
+    street VARCHAR(255),
+    year INT,
+    join_date DATE,
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES Departments(department_id)
+);
+
+-- Create Departments Table
+CREATE TABLE Departments (
+    department_id INT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+-- Create Courses Table
+CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    hours INT,
+    max_grade INT
+);
+
+-- Create Enrollments Table (Students_Courses)
+CREATE TABLE Enrollments (
+    student_id INT,
+    course_id INT,
+    grade VARCHAR(2),
+    semester VARCHAR(255),
+    year INT,
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+);
+
+-- Create Department_Courses Table
+CREATE TABLE Department_Courses (
+    department_id INT,
+    course_id INT,
+    PRIMARY KEY (department_id, course_id),
+    FOREIGN KEY (department_id) REFERENCES Departments(department_id),
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+);

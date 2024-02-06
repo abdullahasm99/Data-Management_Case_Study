@@ -1,0 +1,82 @@
+CREATE OR REPLACE PROCEDURE ADMIN.delete_course(p_course_id IN NUMBER) IS
+BEGIN
+    DELETE FROM enrollments WHERE course_id = p_course_id;
+    DELETE FROM department_courses WHERE course_id = p_course_id;
+    DELETE FROM courses WHERE course_id = p_course_id;
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END delete_course;
+/
+
+CREATE OR REPLACE PROCEDURE ADMIN.delete_department(p_department_id IN NUMBER) IS
+BEGIN
+    DELETE FROM enrollments WHERE student_id IN (SELECT student_id FROM students WHERE department_id = p_department_id);
+    DELETE FROM department_courses WHERE department_id = p_department_id;
+    DELETE FROM departments WHERE department_id = p_department_id;
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END delete_department;
+/
+
+CREATE OR REPLACE PROCEDURE ADMIN.update_course(
+    p_course_id IN NUMBER,
+    p_new_name IN VARCHAR2,
+    p_new_hours IN NUMBER,
+    p_new_max_grade IN NUMBER
+)
+IS
+BEGIN
+    UPDATE courses
+    SET name = p_new_name,
+        hours = p_new_hours,
+        max_grade = p_new_max_grade
+    WHERE course_id = p_course_id;
+    
+    COMMIT;
+END update_course;
+/
+
+CREATE OR REPLACE PROCEDURE ADMIN.update_department (
+    p_department_id IN NUMBER,
+    p_new_department_name IN VARCHAR2
+) AS
+BEGIN
+    UPDATE departments
+    SET name = p_new_department_name
+    WHERE department_id = p_department_id;
+    
+    COMMIT;
+END;
+/
+
+CREATE OR REPLACE procedure ADMIN.update_stud_info ( v_student_id integer, v_name varchar2, v_street varchar2, v_dob date, v_city varchar2, v_year integer, v_join_date date, v_department_id integer )
+is
+
+begin
+
+update students
+set  
+NAME = v_name,
+DOB = v_dob,
+CITY = v_city,
+STREET = v_street,
+YEAR = v_year,
+JOIN_DATE = v_join_date,
+DEPARTMENT_ID = v_department_id
+where STUDENT_ID = v_student_id;
+
+if SQL%ROWCOUNT = 0 THEN
+    DBMS_OUTPUT.PUT_LINE('No student found with ID ' || v_student_id);
+  else
+    DBMS_OUTPUT.PUT_LINE('Update successful for student ID ' || v_student_id);
+  end if;
+  
+commit;
+end;
+/
