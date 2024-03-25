@@ -1,4 +1,6 @@
-![1707229882636](https://github.com/abdullahasm99/Data-Management_Case_Study/assets/153215733/fca5d3fb-9672-4f99-bb4b-b7bd46d5797e)# University Data Management System
+# University Data Management System
+
+![1707229882636](https://github.com/abdullahasm99/Data-Management_Case_Study/assets/153215733/fca5d3fb-9672-4f99-bb4b-b7bd46d5797e)
 
 Welcome to the University Data Management System repository! This project showcases a comprehensive approach to managing university data efficiently and seamlessly. Dive into our journey through innovative database design, SQL implementation, automation, Java integration, and insightful reporting.
 
